@@ -172,7 +172,7 @@ Gemini risk scores and explanations are model outputs. A complete evaluation sti
 - In the model-assisted path, submitted messages and retrieved reference text are sent to Google's API. When embedding access works, query text is sent for embedding too, including before a library shortcut can be selected.
 - The Gmail monitor writes sender, subject, and results to local CSV/JSONL files. Alerts can transmit those details to the configured Telegram chat. The files are excluded from the prepared package and Git tracking.
 - API keys and passwords belong only in local `.env` files. The `.env.example` files contain no credentials.
-- A hardcoded Telegram token was removed during review. The owner must revoke the exposed token before this repository is published; removing it from code does not revoke it.
+- A hardcoded Telegram token was removed during review. Revoke the exposed token and configure a new one before using the bot again; removing it from code does not revoke it.
 
 ## Repository map
 

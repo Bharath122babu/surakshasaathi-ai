@@ -34,7 +34,7 @@ These are release-preparation corrections, not a claim that the prototype is pro
 
 ## Remaining work
 
-1. **Token rotation is required.** The token in the original ZIP must be revoked through BotFather. The original archive is preserved and still contains it; do not publish that archive.
+1. **Token rotation.** Revoke the token in the original ZIP through BotFather before using the bot again. The original archive is preserved and still contains it; do not publish that archive. The reviewed source and archive contain no embedded token.
 2. **Attribution.** At Bharath's request, no teammate names or tags are included. The README highlights his team-lead/backend role without claiming sole authorship of the complete project.
 3. **Independent evaluation.** The library has 40 scam references and no representative benign set. Self-retrieval cannot measure real detection, false positives or language performance.
 4. **Corpus quality.** Several advice strings contain absolute institutional/domain claims. Review them against authoritative sources and soften unsupported assertions before using the product with real users. No facts in the corpus were independently validated in this code review.
