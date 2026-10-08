@@ -1,0 +1,26 @@
+# Suraksha Saathi v2.0 — Python Dependencies
+# Install: pip install -r requirements.txt
+
+# ── Core AI ──────────────────────────────
+google-genai>=1.0.0
+
+# ── FastAPI Bridge (api.py) ───────────────
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+
+# ── Email Monitoring ─────────────────────
+# (imaplib and email are stdlib — no install needed)
+
+# ── Telegram Bot ─────────────────────────
+python-telegram-bot>=20.0
+
+# ── Similarity / Math ────────────────────
+numpy>=1.26.0
+scikit-learn>=1.4.0
+
+# ── Dashboard (Streamlit) ─────────────────
+streamlit>=1.34.0
+pandas>=2.2.0
+
+# ── Utilities ────────────────────────────
+python-dotenv>=1.0.0

@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+node_modules/
+__pycache__/
+*.pyc
+*.log
+*.jsonl
+dist/
+build/
+.venv/
+guardian_logs.csv
+guardian_logs.jsonl
+.DS_Store

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="480" viewBox="0 0 1280 480" role="img" aria-labelledby="title desc">
+  <title id="title">SurakshaSaathi-AI — Pause. Understand. Act.</title>
+  <desc id="desc">A teal editorial cover for the hackathon project, with an abstract message and protective outline.</desc>
+  <rect width="1280" height="480" fill="#112e2b"/>
+  <path d="M0 442H1280" stroke="#47706a"/>
+  <text x="64" y="64" font-family="Arial,sans-serif" font-size="14" letter-spacing="3" fill="#93d8c6">DIGITAL SAFETY / BUILT AT A HACKATHON</text>
+  <text x="64" y="170" font-family="Arial,sans-serif" font-size="68" font-weight="700" letter-spacing="-3" fill="#f5f3e8">SurakshaSaathi-AI</text>
+  <text x="68" y="242" font-family="Georgia,serif" font-size="42" fill="#93d8c6">Pause. Understand. Act.</text>
+  <text x="68" y="298" font-family="Arial,sans-serif" font-size="19" fill="#cad8d2">Context-aware message review and multilingual guidance.</text>
+  <rect x="68" y="346" width="264" height="40" rx="20" fill="#e1ad54"/>
+  <text x="91" y="372" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#112e2b">AI SYNERGY HACKATHON WINNER</text>
+  <text x="359" y="372" font-family="Arial,sans-serif" font-size="15" fill="#cad8d2">Gwalior AI Summit · 2026</text>
+  <path d="M1060 90L1180 142V251C1180 318 1125 360 1060 392C995 360 940 318 940 251V142Z" fill="none" stroke="#93d8c6" stroke-width="2"/>
+  <rect x="971" y="169" width="180" height="110" rx="13" fill="#1e4842" stroke="#47706a"/>
+  <path d="M999 202H1118M999 224H1087M999 246H1060" stroke="#cad8d2" stroke-width="4"/>
+  <circle cx="1122" cy="295" r="27" fill="#e1ad54"/>
+  <path d="M1110 295L1118 303L1134 286" fill="none" stroke="#112e2b" stroke-width="4"/>
+  <text x="68" y="468" font-family="Arial,sans-serif" font-size="12" fill="#cad8d2">BHARATH B. / TEAM LEAD &amp; BACKEND OWNER</text>
+  <text x="976" y="468" font-family="Arial,sans-serif" font-size="12" fill="#cad8d2">RESEARCH → BUILD → REVIEW</text>
+</svg>
