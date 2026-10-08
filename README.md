@@ -62,6 +62,36 @@ SMS and WhatsApp **text can be pasted or forwarded** for review. There is no aut
 
 ## How a review works
 
+### From message to explanation
+
+The dashboard's HTTP route has two response paths. This diagram follows the implemented code, including its in-memory cache.
+
+```mermaid
+flowchart TD
+    message["Paste a suspicious message"] --> api["FastAPI: validate input"]
+    api --> retrieval["Retrieve context from 40 patterns"]
+    retrieval --> decision{"Similarity at least 0.92?"}
+    decision -->|Yes| library["Curated advice in the chosen language"]
+    decision -->|No| cache{"Cached result available?"}
+    cache -->|Yes| result["Label response source and flag threshold"]
+    cache -->|No| scoring["Gemini stage A: risk scoring"]
+    scoring --> explanation["Gemini stage B: explanation and guidance"]
+    explanation --> result
+    library --> result
+    result --> dashboard["Show the result in the React dashboard"]
+
+    classDef input fill:#edf3e8,stroke:#56816b,color:#17382e
+    classDef service fill:#173c35,stroke:#56816b,color:#fffaf0
+    classDef choice fill:#f2dcab,stroke:#98732f,color:#352a13
+    classDef output fill:#d2e7dd,stroke:#56816b,color:#17382e
+    class message,dashboard input
+    class api,retrieval,scoring,explanation service
+    class decision,cache choice
+    class library,result output
+```
+
+*A high retrieval similarity is a close reference match, not a probability of fraud. The Gmail monitor and Telegram bot call the engine directly; they do not use this HTTP shortcut or cache.*
+
 1. **Retrieve context.** Compare the submitted text with the pattern library. Google embeddings are attempted when configured; otherwise the matcher uses offline TF-IDF cosine similarity.
 2. **Choose the response path.** A similarity score of at least `0.92` returns the curated entry without a Gemini call. The response identifies this as `knowledge_base`.
 3. **Explain ambiguous matches.** Other messages use two Gemini calls: an initial risk score, followed by a contextual explanation of tactics, advice, and a next step.
